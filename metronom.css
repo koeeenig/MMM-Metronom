@@ -1,0 +1,15 @@
+table.station td {
+   padding: 0px 5px 0px 5px;
+}
+
+table.station td.late {
+    color: red;
+ }
+
+ table.station td.on-time {
+    color: green;
+ }
+
+ table.station td.early {
+    color: orange;
+ }
