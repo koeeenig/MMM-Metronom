@@ -33,6 +33,10 @@ module.exports = NodeHelper.create({
                     status.abfahrt = [status.abfahrt];
                 }
 
+                if(status.abfahrt[0] == null) {
+                    status.abfahrt = [];
+                }
+
                 if(status.name.length == 0) {
                     self.sendSocketNotification('INVALID_STATION',station)
                 } else {

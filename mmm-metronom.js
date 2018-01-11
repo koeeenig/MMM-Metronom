@@ -24,6 +24,12 @@ Module.register("mmm-metronom",{
         if(!this.stationStatus) {
             wrapper.innerHTML = 'Loading...';
         } else {
+
+            if(this.stationStatus.abfahrt.length == 0) {
+                wrapper.innerHTML = 'Kein Zugverkehr';
+                return wrapper;
+            }
+
             var table = document.createElement("table");
             table.className = 'station small normal';
             wrapper.appendChild(table);
