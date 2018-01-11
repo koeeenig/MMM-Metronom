@@ -88,7 +88,7 @@ Module.register("mmm-metronom",{
 
     getStyles: function() {
         return [
-            'metronom.css', 'font-awesome.css' // will try to load it from the vendor folder, otherwise it will load is from the module folder.
+            'metronom.css', 'font-awesome.css'
         ]
     },
     // Define start sequence.
@@ -113,20 +113,6 @@ Module.register("mmm-metronom",{
 
     fetchStation: function (station) {
         var self = this;
-        // Log.info('Before: ' + self.current);
-
-        // if(!self.current) {
-        //     self.current = 0;
-        // } else if (self.current >= self.config.stations.length) {
-        //     self.current = 0;
-        // } else {
-        //     self.current++;
-        // }
-
-       
-        // Log.info('Current: ' + self.current + ' Stations: ' + JSON.stringify(self.config.stations));
-
-        // var station = self.config.stations[self.current];
         
         Log.info('send notification: '+ station);
         this.sendSocketNotification('FETCH_STATION',
@@ -160,8 +146,3 @@ Module.register("mmm-metronom",{
         }
     }
 });
-
-
-
-// stationStatus('ATST');
-
